@@ -1,2 +1,2 @@
 # Repositório de estudo da linguagem Dart
-## Todos os códigos feitos por mim
+### Todos os códigos feitos e documentados por mim
