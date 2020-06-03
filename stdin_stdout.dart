@@ -4,5 +4,7 @@ main(){
   stdout.writeln('Qual é o seu nome?');
   // recebe o que o usuário digitou e armazena na variável
   String nome = stdin.readLineSync();
-  print("Olá, $nome!");
+  stdout.writeln('Olá, $nome! Qual a sua idade?');
+  var idade = stdin.readLineSync();
+  print("$nome, você tem $idade anos.");
 }
