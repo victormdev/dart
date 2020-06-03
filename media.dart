@@ -4,10 +4,14 @@
   o método toStringAsPrecision é responsável por tratar as casas decimais
 */
 
+// importando biblioteca para utilidades
 import 'dart:io';
 
 main(){
   double media;
+  int peso1 = 3; // grau de importância alto
+  int peso2 = 2; // grau de importância médio
+  int peso3 = 1; // grau de importância baixo
   stdout.writeln('Qual foi a sua primeira nota?');
   int nota1 = int.parse(stdin.readLineSync());
   stdout.writeln('Qual foi a sua segunda nota?');
@@ -15,7 +19,9 @@ main(){
   stdout.writeln('Qual foi a sua terceira nota?');
   int nota3 = int.parse(stdin.readLineSync());
 
-  media = (nota1 + nota2 + nota3) / 3;
+  // cálculo de média ponderada (considerando os pesos)
+  media = (nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3) / (peso1 + peso2 + peso3) ;
+  // validação de acordo com a média obtida
   if(media >= 7){
     print('Parabéns! Você passou e a sua média foi ${media.toStringAsPrecision(2)}!');
   } else {
