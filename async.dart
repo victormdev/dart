@@ -7,8 +7,8 @@ main(){
 
 }
 
-printFileContent(){
-  Future<String> fileContent = downloadAFile();
+printFileContent() async {
+  String fileContent = await downloadAFile();
   print('The content of the fila is --> $fileContent');
 }
 
